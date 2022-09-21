@@ -1,7 +1,10 @@
 const Hero = () => {
   return (
     <section className="section">
-        <h1>Hero</h1>
+      <div className="container">
+        <h1 className="title | fs-990 fw-bold">Jonathan</h1>
+        <h1 className="title | fs-990 fw-bold">Evey</h1>
+      </div>
     </section>
   )
 }
