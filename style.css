@@ -1,0 +1,19 @@
+body {
+	position: relative;
+}
+
+header {
+	position: fixed;
+}
+
+section {
+	height: 110vh;
+}
+
+.main-btn {
+	translate: 0 -100%;
+}
+
+.show {
+	translate: 0 0;
+}
