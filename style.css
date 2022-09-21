@@ -3,7 +3,14 @@ body {
 }
 
 header {
+	background-color: transparent;
 	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
+
+header .container {
+	background-color: transparent;
 }
 
 section {
@@ -11,9 +18,16 @@ section {
 }
 
 .main-btn {
+	opacity: 0;
 	translate: 0 -100%;
+	pointer-events: none;
+}
+
+.main-btn.show {
+	pointer-events: all;
 }
 
 .show {
+	opacity: 1;
 	translate: 0 0;
 }
