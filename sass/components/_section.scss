@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+.section {
+    background-color: black;
+
+    & .title {
+        color: white;
+        position: relative;
+        font-family: $ff-accent;
+        text-transform: uppercase;
+    }
+    & .title::after {
+        content: " ";
+        display: flex;
+        background-color: currentColor;
+        max-width: 750px;
+        height: 4px;
+    }
+
+    main & {
+        padding-top: 15rem;
+    }
+
+    main & .title:nth-child(2) {
+        translate: 15rem 0;
+    }
+
+}
