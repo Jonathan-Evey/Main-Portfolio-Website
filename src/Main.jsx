@@ -7,7 +7,6 @@ function Main() {
 
   return (
     <main className="main">
-      Main
       <Hero />
       <Projects />
       <Contact />
