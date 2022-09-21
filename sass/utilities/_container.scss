@@ -1,4 +1,11 @@
 .container {
-    width: min(100% - 2rem, 60rem);
+    width: min(100% - 12rem);
     margin-inline: auto;
+
+
+    header & {
+      padding-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+    }
   }
