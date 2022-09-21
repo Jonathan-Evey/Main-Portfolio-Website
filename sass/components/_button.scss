@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: $ff-accent;
+    border: none;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent, 35%, rgba(0,0,0,1));
+    color: white;
+    border-bottom: 3px solid white;
+    padding: 1.5rem 0;
+    width: min(12rem);
+}
