@@ -12,16 +12,25 @@
         content: " ";
         display: flex;
         background-color: currentColor;
-        max-width: 750px;
+        width: min(750px, calc(100% - 15rem));
         height: 4px;
     }
 
-    main & {
+    & .card-project .title::after {
+        width: min(500px, calc(100% - 2rem));
+    }
+
+    main &:first-child {
+        display: flex;
         padding-top: 13rem;
     }
 
     main & .title:nth-child(2) {
         translate: 15rem 0;
     }
+
+    main &:nth-child(2) {
+        padding-top: 20rem;
+    } 
 
 }
