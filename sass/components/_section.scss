@@ -1,10 +1,9 @@
 @use "../abstracts/" as *;
 
 .section {
-    background-color: black;
+    
 
     & .title {
-        color: white;
         position: relative;
         font-family: $ff-accent;
         text-transform: uppercase;
@@ -18,7 +17,7 @@
     }
 
     main & {
-        padding-top: 15rem;
+        padding-top: 13rem;
     }
 
     main & .title:nth-child(2) {

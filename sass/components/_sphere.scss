@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+.bg-large-sphere {
+    position: absolute;
+    height: 65vw;
+    width: 65vw;
+    background-color: clr(neutral, dark);
+    border-radius: 100%;
+    translate: -20% -35%;
+    z-index: -1;
+}
