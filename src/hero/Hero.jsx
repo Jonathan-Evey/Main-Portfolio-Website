@@ -1,9 +1,12 @@
 const Hero = () => {
   return (
     <section className="section">
-      <div className="container">
-        <h1 className="title | fs-990 fw-bold">Jonathan</h1>
-        <h1 className="title | fs-990 fw-bold">Evey</h1>
+      <div className="bg-large-sphere"></div>
+      <div className="hero container">
+        <h1 className="title | fs-900 fw-bold">Jonathan</h1>
+        <h1 className="title | fs-900 fw-bold">Evey</h1>
+        <p className="fs-500 margin-block-start-40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed commodi sequi fuga mollitia earum exercitationem architecto, cumque veniam doloribus nemo. Velit cumque maxime magnam mollitia minus cupiditate perferendis. Veritatis.</p>
+        <p className="fs-500 margin-block-start-32">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit!</p>
       </div>
     </section>
   )
