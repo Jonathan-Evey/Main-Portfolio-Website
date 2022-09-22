@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+body {
+    color: clr(neutral, no-color-white);
+    background-color: clr(neutral, no-color-black); 
+}
