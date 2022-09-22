@@ -1,14 +1,16 @@
 @use "../abstracts/" as *;
 
 .card {
-
     &-project {
         max-width: 1230px;
         margin-inline: auto;
         display: grid;
         grid-template-columns: 60% calc(40% - 2rem);
-        gap: 2rem;
-        background-color: clr(neutral, dark);
+        grid-template-areas:
+            "left right";
+        gap: 1rem;
+        outline: 2px solid clr(neutral, lightest);
+        background-color: clr(neutral, darkest);
 
         & .container-project-img {
             display: grid;
@@ -18,8 +20,13 @@
                 display: block;
                 margin-inline: auto;
                 width: min(100%, 350px);
+                min-height: 475px;
                 aspect-ratio: 0.65;
                 object-fit: cover;
+
+                &:hover {
+                    z-index: 1;
+                }
             }
 
             & img:first-child {
@@ -29,6 +36,30 @@
             & img:nth-child(2) {
                 translate: -2rem 3.5rem;
             }
+        }
+
+        &:nth-child(2) {
+
+            grid-template-columns: calc(40% - 2rem) 60%;
+
+            & .container-project-img {
+                grid-column-start: right;
+
+                & img:first-child {
+                    translate: 2rem 3.5rem;
+                    z-index: 1;
+                }
+    
+                & img:nth-child(2) {
+                    translate: -1.5rem -3.5rem;
+                }
+            }  
+
+            & .container-project-text {
+                grid-area: left;
+            }
+
+            
         }
 
         & .container-project-text {
@@ -41,7 +72,66 @@
                 display: flex;
                 height: 100%;
                 align-items: flex-end;
+
+                & a:not(:first-child) {
+                    margin-left: 2rem;
+                }
             }
         }
     }
+
+    &-small-project {
+
+        outline: 2px solid clr(neutral, lightest);
+        background-color: clr(neutral, darkest);
+        max-width: 450px;
+        margin-inline: auto;
+
+        & .container-project-img {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            max-width: 450px;
+            margin-inline: auto;
+
+            & img {
+                display: block;
+                margin-inline: auto;
+                width: min(100%, 225px);
+                max-height: 450px;
+                aspect-ratio: 0.65;
+                object-fit: cover;
+
+                &:hover {
+                    z-index: 1;
+                }
+            }
+
+            & img:first-child {
+                translate: 1.5rem 0;
+            }
+
+            & img:nth-child(2) {
+                translate: -1.5rem 2.5rem;
+            }
+        }
+
+        & .container-project-text {
+            display: flex;
+            flex-direction: column;
+
+            & .container-project-links {
+                margin-block-start: 1.5rem;
+
+                align-self: flex-end;
+                display: flex;
+                height: 100%;
+                align-items: flex-end;
+
+                & a:not(:first-child) {
+                    margin-left: 2rem;
+                }
+            }
+        }
+    }
+
 }

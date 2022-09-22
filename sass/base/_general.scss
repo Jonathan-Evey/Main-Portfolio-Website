@@ -4,3 +4,18 @@ body {
     color: clr(neutral, no-color-white);
     background-color: clr(neutral, no-color-black); 
 }
+
+a {
+    color: clr(neutral, no-color-white);
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a::after {
+    content: "";
+    display: block;
+    background-color: currentColor;
+    width: 100%;
+    height: 2px;
+}
