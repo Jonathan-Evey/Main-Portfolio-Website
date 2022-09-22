@@ -13,10 +13,6 @@ header .container {
 	background-color: transparent;
 }
 
-section {
-	height: 110vh;
-}
-
 .main-btn {
 	opacity: 0;
 	translate: 0 -100%;
