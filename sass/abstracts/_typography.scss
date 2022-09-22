@@ -1,15 +1,17 @@
+
+$ff-chivo: 'Chivo', sans-serif;
 $ff-exo: 'Exo 2', sans-serif;
 
-
+$ff-main: $ff-chivo;
 $ff-accent: $ff-exo;
 
 $font-sizes: (
-  990: 5.125rem,
-  900: 3.75rem,
+  900: 5.125rem, // Main title elements (64px tablet) (36px on phone)
   800: 3rem,
-  600: 1.5rem, //24px
-  500: 1.3125rem,
-  400: 1.125rem,
+  700: 2.25rem, // 36px project titles (same on tablet) (26px on phone)
+  600: 1.5rem, // 24px - btn/nav text / contact form labels (22px tablet btn/nav) (same on phone)
+  500: 1.375rem, // 22px hero text  (same on tablet) (16px on phone)
+  400: 1.125rem, // 18px project card text (same on tablet) (16px on phone)
 );
 
 $fw-400: 400;
