@@ -1,14 +1,74 @@
 @use "../abstracts/" as *;
 
 .btn {
+    position: relative;
     cursor: pointer;
     text-transform: uppercase;
     font-family: $ff-accent;
     border: none;
     background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent, 35%, rgba(0,0,0,1));
-    color: white;
-    border-bottom: 3px solid white;
+    background-image: linear-gradient(to bottom, transparent, 35%, clr(neutral, no-color-black));
+    color: clr(neutral, no-color-white);
+    border-bottom: 3px solid clr(neutral, no-color-white);
     padding: 1.5rem 0;
     width: min(12rem);
+
+	//----hides buttons when the section they take you to is in view
+	opacity: 0;
+	translate: 0 -100%;
+	pointer-events: none;
+
+	&.show {
+		pointer-events: all;
+		opacity: 1;
+		translate: 0 0;
+	}
+
+	
+
+	&:hover,
+	&:focus {
+		background-image: none;
+    	color: #cacaca;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% + 3px);
+		transition: transform 300ms ease-in-out;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		background-color: black;
+		background-image: linear-gradient(to bottom, transparent, 35%, #3b3b3b);
+		z-index: -1;
+	}
+
+	&:hover::before,
+	&:focus::before {
+		transform: scaleY(1);
+		transform-origin: bottom;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% + 3px);
+		transition: transform 300ms ease-in-out;
+		transform: scaleX(0);
+		transform-origin: center;
+		border-bottom: 3px solid #cacaca;
+	}
+
+	&:hover::after,
+	&:focus::after {
+		transform: scaleX(1);
+		transform-origin: center;
+	}
 }

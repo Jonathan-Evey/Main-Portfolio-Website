@@ -1,8 +1,16 @@
 @use "../abstracts/" as *;
 
 body {
+    position: relative;
+    overflow-x: hidden;
     color: clr(neutral, no-color-white);
     background-color: clr(neutral, no-color-black); 
+}
+
+header {
+    position: fixed;
+	z-index: 1000;
+	width: 100%;
 }
 
 a {
