@@ -9,11 +9,12 @@ a {
 
 .link {
 
+    padding: 0.25rem 0.5rem;
 
     &::after {
         content: "";
         display: block;
-        background-color: currentColor;
+        background-color: clr(neutral, no-color-white);
     }
 
     &.project::after {
@@ -22,15 +23,48 @@ a {
     }
 
     &.social {
+        position: relative;
         display: block;
-    }
+        
 
-    &.social:nth-child(2) {
-        transform: translateX(25%);
-    }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 0.5rem;
+            width: clamp(400px, 750px, calc(100% - 16rem));
+            height: 4px;
+            background-color: clr(neutral, normal);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: all 350ms ease-in-out;
+        }
 
-    &.social::after {
-        width: clamp(400px, 750px, calc(100% - 15rem));
-        height: 4px;
-    }
+        &::after {
+            width: clamp(400px, 750px, calc(100% - 15rem));
+            height: 4px;
+        }
+
+
+        &:nth-child(2) {
+            transform: translateX(25%);
+            @media (max-width: 1400px) {
+                transform: translateX(15%);
+            }
+            @media (max-width: 1300px) {
+                transform: translateX(10%);
+            }
+        }
+
+        &:hover {
+            color: clr(neutral, normal);
+
+            &::before {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+
+
+    } 
 }

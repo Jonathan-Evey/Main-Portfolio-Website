@@ -72,6 +72,6 @@
 	}
 
 	&.submit {
-		width: 40%;
+		width: max(225px, 40%);
 	}
 }

@@ -14,5 +14,9 @@
 
     &.contact {
         translate: 57.5% 10%;
+        @media (max-width: 1250px) {
+            height: 100vw;
+            width: 100vw;
+        }
     }
 }

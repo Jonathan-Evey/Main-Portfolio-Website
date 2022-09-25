@@ -16,6 +16,10 @@
         height: 4px;
     }
 
+    & .fs-900.title::after {
+        height: 6px;
+    }
+
     & .card-project .title::after,
     & .card-small-project .title::after {
         width: min(500px, calc(100% - 2rem));
@@ -40,6 +44,10 @@
         display: grid;
         grid-template-columns: 4fr 3fr;
         overflow: hidden;
+
+       @media (max-width: 1250px) {
+            grid-template-columns: 1fr;
+       } 
     }
 
 }
