@@ -6,6 +6,13 @@
     width: 65vw;
     background-color: clr(neutral, darkest);
     border-radius: 100%;
-    translate: -20% -35%;
     z-index: -1;
+
+    &.hero {
+        translate: -20% -35%;
+    }
+
+    &.contact {
+        translate: 57.5% 10%;
+    }
 }
