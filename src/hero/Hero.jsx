@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <section className="section">
-      <div className="bg-large-sphere"></div>
+      <div className="bg-large-sphere hero"></div>
       <div className="hero container">
         <h1 className="title | fs-900 fw-bold">Jonathan</h1>
         <h1 className="title | fs-900 fw-bold margin-block-end-40">Evey</h1>
