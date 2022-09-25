@@ -6,6 +6,9 @@ const setUpObserver = () => {
 				document
 					.querySelector(".main-btn")
 					.classList.toggle("show", !entry.isIntersecting);
+				document
+					.querySelector(".projects-btn")
+					.classList.toggle("show", entry.isIntersecting);
 			});
 		},
 		{
@@ -13,19 +16,35 @@ const setUpObserver = () => {
 		}
 	);
 	mainObserver.observe(eachSection[0]);
-	const projectsObserver = new IntersectionObserver(
+	// const projectsObserver = new IntersectionObserver(
+	// 	(entries) => {
+	// 		entries.forEach((entry) => {
+	// 			document
+	// 				.querySelector(".projects-btn")
+	// 				.classList.toggle("show", !entry.isIntersecting);
+	// 		});
+	// 	},
+	// 	{
+	// 		threshold: 0.2,
+	// 	}
+	// );
+	// projectsObserver.observe(eachSection[1]);
+	const contactObserver = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
 				document
-					.querySelector(".projects-btn")
+					.querySelector(".contact-btn")
 					.classList.toggle("show", !entry.isIntersecting);
+				document
+					.querySelector(".projects-btn")
+					.classList.toggle("show", entry.isIntersecting);
 			});
 		},
 		{
-			threshold: 0.2,
+			threshold: 0.5,
 		}
 	);
-	projectsObserver.observe(eachSection[1]);
+	contactObserver.observe(eachSection[2]);
 };
 
 export default setUpObserver;
