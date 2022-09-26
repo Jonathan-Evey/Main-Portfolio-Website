@@ -19,6 +19,10 @@
 	pointer-events: none;
 	transition: all 350ms ease-in-out;
 
+	@media (max-width: 650px) {
+		border-bottom: 2px solid clr(neutral, no-color-white);
+	}
+
 	&.show {
 		pointer-events: all;
 		opacity: 1;
@@ -63,6 +67,9 @@
 		transform: scaleX(0);
 		transform-origin: center;
 		border-bottom: 3px solid clr(neutral, lightest);
+		@media (max-width: 650px) {
+			border-bottom: 2px solid clr(neutral, lightest);
+		}
 	}
 
 	&:hover::after,
@@ -73,5 +80,12 @@
 
 	&.submit {
 		width: max(225px, 40%);
+		@media (max-width: 375px) {
+			margin-inline-start: 0;
+			margin-inline: auto;
+			padding: 0.75rem 1rem;
+			width: 75%;
+			font-size: 1.125rem;
+		}
 	}
 }

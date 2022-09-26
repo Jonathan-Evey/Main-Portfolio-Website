@@ -10,6 +10,14 @@
 
     &.hero {
         translate: -20% -35%;
+        @media (max-width: 900px) {
+            height: 90vw;
+            width: 90vw;
+        }
+        @media (max-width: 375px) {
+            height: 115vw;
+            width: 115vw;
+        }
     }
 
     &.contact {
@@ -17,6 +25,16 @@
         @media (max-width: 1250px) {
             height: 100vw;
             width: 100vw;
+        }
+        @media (max-width: 500px) {
+            translate: 25% 10%;
+            height: 150vw;
+            width: 150vw;
+        }
+        @media (max-width: 375px) {
+            translate: 20% 10%;
+            height: 200vw;
+            width: 200vw;
         }
     }
 }

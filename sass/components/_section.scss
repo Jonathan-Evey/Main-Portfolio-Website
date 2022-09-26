@@ -7,6 +7,11 @@
         position: relative;
         font-family: $ff-accent;
         text-transform: uppercase;
+        &.projects {
+            @media (max-width: 650px) {
+                margin-block-end: 5rem;
+            }
+        }
     }
     & .title::after {
         content: " ";
@@ -14,25 +19,49 @@
         background-color: currentColor;
         width: clamp(400px, 750px, calc(100% - 15rem));
         height: 4px;
+        @media (max-width: 650px) {
+            width: 75%;
+        }
     }
 
     & .fs-900.title::after {
         height: 6px;
+        @media (max-width: 650px) {
+            height: 4px;
+        }
     }
 
     & .card-project .title::after,
     & .card-small-project .title::after {
         width: min(500px, calc(100% - 2rem));
+        @media (max-width: 650px) {
+            height: 3px;
+            width: 75%;
+        }
     }
 
     main &:first-child {
         display: flex;
         padding-top: 13rem;
         padding-bottom: 20rem;
+        
+        @media (max-width: 900px) {
+            padding-bottom: 13rem;
+        }
+        @media (max-width: 550px) {
+            padding-top: 8rem;
+            padding-bottom: 10rem;
+        }
     }
 
     main & .title:nth-child(2) {
         translate: 15rem 0;
+        @media (max-width: 750px) {
+            translate: 7.5rem 0;
+        }
+        @media (max-width: 550px) {
+            translate: 5rem 0;
+        }
     }
 
     // main &:nth-child(2) {
@@ -47,7 +76,12 @@
 
        @media (max-width: 1250px) {
             grid-template-columns: 1fr;
-       } 
+       }
+       
+       @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+       }
     }
 
 }
