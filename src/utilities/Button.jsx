@@ -1,6 +1,6 @@
 const Button = (props) => {
   return (
-    <button className={`btn ${props.className}`}>{props.text}</button>
+    <button onClick={props.className === "toggle-nav-btn" ? props.toggleMenu : null } className={`btn ${props.className}`}>{props.text}</button>
   )
 }
 

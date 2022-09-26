@@ -11,4 +11,9 @@ header {
     position: fixed;
 	z-index: 1000;
 	width: 100%;
+    @media (max-width: 725px) {
+        display: flex;
+        justify-content: flex-end;
+        pointer-events: none;
+    }
 }
