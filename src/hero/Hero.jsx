@@ -1,6 +1,9 @@
-const Hero = () => {
+import React, { forwardRef, useRef } from 'react'
+
+const Hero = forwardRef((props, ref) => {
+
   return (
-    <section className="section">
+    <section className="section" ref={ref}>
       <div className="bg-large-sphere hero"></div>
       <div className="hero container">
         <h1 className="title | fs-900 fw-bold">Jonathan</h1>
@@ -10,6 +13,6 @@ const Hero = () => {
       </div>
     </section>
   )
-}
+});
 
 export default Hero

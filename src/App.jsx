@@ -5,14 +5,18 @@ import Main from './Main'
 
 const App = () => {
 
+    const heroRef = useRef(null)
+    const projectsRef = useRef(null)
+    const contactRef = useRef(null)
+
     useEffect(() => {
         setUpObserver()
     })
 
     return (
     <>
-        <Header />
-        <Main />
+        <Header heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} />
+        <Main heroRef={heroRef} projectsRef={projectsRef} contactRef={contactRef} />
     </>
     )
 }

@@ -1,9 +1,10 @@
+import React, { forwardRef, useRef } from 'react'
 import MainProjectsContainer from "./MainProjectsContainer"
 import SmallProjectsContainer from "./SmallProjectsContainer"
 
-const Projects = () => {
+const Projects = forwardRef((props, ref) => {
   return (
-    <section className="section">
+    <section className="section" ref={ref}>
       <div className="container">
         <h2 className="title projects | fs-900 fw-bold margin-block-end-96">Projects</h2>
         <MainProjectsContainer />
@@ -11,6 +12,6 @@ const Projects = () => {
       </div>
     </section>
   )
-}
+});
 
 export default Projects

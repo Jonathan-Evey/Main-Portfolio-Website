@@ -1,26 +1,49 @@
-import Button from "./utilities/Button"
-
-const Header = () => {
+const Header = (props) => {
 
   const toggleMenu = (e) => {
-    document.getElementById("main-nav").classList.toggle("open");
+    document.querySelector(".main-nav").classList.toggle("open");
     document.querySelector(".nav-icon-display").classList.toggle("open");
     document.querySelector(".nav-icon-display-two").classList.toggle("open");
     e.target.classList.toggle("open");
   }
 
+  const closeMenu = () => {
+    document.querySelector(".main-nav").classList.remove("open");
+    document.querySelector(".nav-icon-display").classList.remove("open");
+    document.querySelector(".nav-icon-display-two").classList.remove("open");
+    document.querySelector(".toggle-nav-btn").classList.remove("open");
+  }
+
+  const scrollToHero = (e) => {
+    e.target.blur()
+    props.heroRef.current.scrollIntoView({ behavior: 'smooth' })
+    return closeMenu()
+  }
+
+  const scrollToProjects = (e) => {
+    e.target.blur()
+    props.projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+    return closeMenu()
+  }
+
+  const scrollToContact = (e) => {
+    e.target.blur()
+    props.contactRef.current.scrollIntoView({ behavior: 'smooth' })
+    return closeMenu()
+  }
+
   return (
     <header> 
-        <nav className="container" id="main-nav">
+        <nav className="container main-nav">
             <div>
-              <Button className={"main-btn underline | fs-600 fw-bold"} text={"main"} />
+              <button onClick={scrollToHero} className="btn main-btn underline | fs-600 fw-bold">main</button>
             </div>
             <div>
-                <Button className={"projects-btn underline | fs-600 fw-bold show"} text={"projects"}/>
-                <Button className={"contact-btn underline | fs-600 fw-bold margin-inline-start-36 show"} text={"contact"}/>
+                <button onClick={scrollToProjects} className="btn projects-btn underline | fs-600 fw-bold show">projects</button>
+                <button onClick={scrollToContact} className="btn contact-btn underline | fs-600 fw-bold margin-inline-start-36 show">contact</button>
             </div>
         </nav>
-        <Button toggleMenu={toggleMenu} className={"toggle-nav-btn"} text={""} />
+        <button onClick={toggleMenu} className=" btn toggle-nav-btn"></button>
         <div className="nav-icon-display"></div>
         <div className="nav-icon-display-two"></div>
     </header>
