@@ -20,6 +20,15 @@ a {
         @media (max-width: 650px) {
             font-size: 1rem;
         }
+
+        &:hover,
+        &:focus {
+            color: clr(neutral, normal);
+
+            &::after {
+                background-color: clr(neutral, normal)  ;
+            }
+        }
     }
 
     &::after {
@@ -61,6 +70,8 @@ a {
         &::after {
             width: clamp(400px, 750px, calc(100% - 15rem));
             height: 4px;
+            transform-origin: right;
+            transition: all 350ms ease-in-out;
             @media (max-width: 650px) {
                 height: 2px;
                 width: 75%;
@@ -84,13 +95,20 @@ a {
             }
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: clr(neutral, normal);
+
 
             &::before {
                 transform: scaleX(1);
                 transform-origin: left;
             }
+            &::after {
+                transform: scaleX(0);
+                transform-origin: right;
+            }
+            
         }
 
 
