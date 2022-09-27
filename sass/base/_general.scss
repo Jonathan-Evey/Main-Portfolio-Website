@@ -1,8 +1,12 @@
 @use "../abstracts/" as *;
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
     color: clr(neutral, no-color-white);
     background-color: clr(neutral, no-color-black); 
 }
