@@ -39,7 +39,7 @@ const Header = (props) => {
               <button onClick={scrollToHero} className="btn main-btn underline | fs-600 fw-bold">main</button>
             </div>
             <div>
-                <button onClick={scrollToProjects} className="btn projects-btn underline | fs-600 fw-bold">projects</button>
+                <button onClick={scrollToProjects} className="btn projects-btn underline | fs-600 fw-bold show">projects</button>
                 <button onClick={scrollToContact} className="btn contact-btn underline | fs-600 fw-bold margin-inline-start-36 show">contact</button>
             </div>
         </nav>
