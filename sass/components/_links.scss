@@ -6,6 +6,11 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     font-family: $ff-accent;
+
+    & span {
+        vertical-align: super;
+        font-size: 0.75rem;
+    }
 }
 
 .link {
