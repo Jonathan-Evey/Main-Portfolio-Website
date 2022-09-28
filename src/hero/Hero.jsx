@@ -8,8 +8,8 @@ const Hero = forwardRef((props, ref) => {
       <div className="hero container">
         <h1 className="title | fs-900 fw-bold">Jonathan</h1>
         <h1 className="title | fs-900 fw-bold margin-block-end-40">Evey</h1>
-        <p className="fs-500 margin-block-end-32">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed commodi sequi fuga mollitia earum exercitationem architecto, cumque veniam doloribus nemo. Velit cumque maxime magnam mollitia minus cupiditate perferendis. Veritatis.</p>
-        <p className="fs-500 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit!</p>
+        <p className="fs-500 margin-block-32">Hello and welcome! I am a self taught developer that started out in front end development and am working towards becoming proficient as a full stack developer. My language skill set currently includes JavaScrip, React, CSS and SASS.</p>
+        {/* <p className="fs-500">Bellow are a few of the projects that I have created along the way.</p> */}
       </div>
     </section>
   )
