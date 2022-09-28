@@ -48,15 +48,18 @@
     flex-direction: column;
     
     & p {
+      translate: -5rem 0;
       align-self: flex-end;
       max-width: 66%;
       @media (max-width: 1000px) {
+        translate: 0 0;
         max-width: 100%;
+        margin-inline: 1.5rem;
       }
       @media (max-width: 550px) {
         align-self: flex-start;
         max-width: 90%;
-        padding-inline-start: 2rem;
+        padding-inline-start: 0.5rem;
       }
     }
   }

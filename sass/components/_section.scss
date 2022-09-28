@@ -56,11 +56,28 @@
 
     main & .title:nth-child(2) {
         translate: 15rem 0;
+
+        &::before {
+            content: "Web Developer";
+            position: absolute;
+            bottom: -1.75rem;
+            left: 0.5rem;
+            font-size: 1.25rem;
+        }
+
         @media (max-width: 750px) {
             translate: 7.5rem 0;
+            &::before {
+                bottom: -1.75rem;
+                font-size: 1.125rem;
+            }
         }
         @media (max-width: 550px) {
             translate: 5rem 0;
+            &::before {
+                bottom: -1.5rem;
+                font-size: 1rem;
+            }
         }
     }
 
