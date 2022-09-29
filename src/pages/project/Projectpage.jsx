@@ -1,5 +1,6 @@
 import allProjects from "../home/projects/projectObjs"
 import Errorpage from "../404/Errorpage"
+import Project from "./Project"
 import { useParams, Link } from "react-router-dom"
 import { useState } from "react"
 import { useEffect } from "react"
@@ -17,23 +18,23 @@ const Projectpage = () => {
         document.querySelector(".nav-icon-display").classList.toggle("open");
         document.querySelector(".nav-icon-display-two").classList.toggle("open");
         e.target.classList.toggle("open");
-      }
+    }
     
-      const closeMenu = () => {
+    const closeMenu = () => {
         document.querySelector(".main-nav").classList.remove("open");
         document.querySelector(".nav-icon-display").classList.remove("open");
         document.querySelector(".nav-icon-display-two").classList.remove("open");
         document.querySelector(".toggle-nav-btn").classList.remove("open");
-      }
+    }
 
     let project = [...allProjects.mainProjects, ...allProjects.smallProjects].find((project) => {
-        if (project.URL === URL) {
-            console.log(project)
-            return project
+    if (project.URL === URL) {
+        return project
         }
     })
 
     if(!project) {
+        console.log(project)
         return(<Errorpage />)
     }
 
@@ -54,17 +55,10 @@ const Projectpage = () => {
             <div className="nav-icon-display-two"></div>
             
         </header>
-            <h1> something {project.title}</h1>
+            <Project project={project}/>
             
         
         </>
-
-
-    // <div>
-    //     <Link to={`/home/#contact`}>Contact</Link>
-    //     <p>hello from project {project.title}</p>
-        
-    // </div>
     )
 }
 
