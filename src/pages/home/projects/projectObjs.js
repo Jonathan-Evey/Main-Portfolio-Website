@@ -4,9 +4,11 @@ const allProjects = {
 			id: 1,
 			title: "Personal Website",
 			URL: "personal-website",
-			description:
+			languages: ["React", "SASS", "JavaScript"],
+			description: [
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit!",
-			img: ["src/assets/test-img.jpg", "src/assets/test-img-two.jpg"],
+			],
+			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
 			link: {
 				demo: "",
 				code: "",
@@ -17,9 +19,11 @@ const allProjects = {
 			id: 2,
 			title: "BookShelf",
 			URL: "bookshelf",
-			description:
+			languages: ["React", "SASS"],
+			description: [
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit!",
-			img: ["src/assets/test-img.jpg", "src/assets/test-img-two.jpg"],
+			],
+			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
 			link: {
 				demo: "",
 				code: "",
@@ -30,9 +34,11 @@ const allProjects = {
 			id: 3,
 			title: "Portfolio Site",
 			URL: "portfolio-site",
-			description:
+			languages: ["React", "SASS"],
+			description: [
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit!",
-			img: ["src/assets/test-img.jpg", "src/assets/test-img-two.jpg"],
+			],
+			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
 			link: {
 				demo: "",
 				code: "",
@@ -53,8 +59,8 @@ const allProjects = {
 				"Site is responsive to accommodate both desktop and mobile views",
 			],
 			img: [
-				"src/assets/restaurant-one.PNG",
-				"src/assets/restaurant-two.PNG",
+				"/src/assets/restaurant-one.PNG",
+				"/src/assets/restaurant-two.PNG",
 			],
 			link: {
 				demo: "https://nighistheend.github.io/top-restaurant-page/",
@@ -65,12 +71,12 @@ const allProjects = {
 		{
 			id: 2,
 			title: "BookShelf",
-			URL: "bookshelf",
+			URL: "book-shelf",
 			languages: ["React", "JavaScript"],
 			description: [
 				"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi mollitia odio, tempora illum id, aliquid, labore quas similique suscipit vel nam ab quasi voluptatibus libero cum! Expedita, non? Tempora, impedit!",
 			],
-			img: ["src/assets/test-img.jpg", "src/assets/test-img-two.jpg"],
+			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
 			link: {
 				demo: "",
 				code: "",
