@@ -3,3 +3,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
+
+.grid-two-column-size-60-40 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
