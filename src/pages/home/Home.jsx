@@ -11,24 +11,24 @@ const Home = () => {
     const projectsRef = useRef(null)
     const contactRef = useRef(null)
 
-    const scrollToLocation = () => {
-        const { hash } = window.location;
-        if (hash !== '') {
-            let retries = 0;
-            const id = hash.replace('#', '');
-            const scroll = () => {
-                retries += 0;
-                if (retries > 50) return;
-                const element = document.getElementById(id);
-                if (element) {
-                setTimeout(() => element.scrollIntoView(), 0);
-                } else {
-                    setTimeout(scroll, 100);
-                }
-            };
-            scroll
-        }
-    }
+    // const scrollToLocation = () => {
+    //     const { hash } = window.location;
+    //     if (hash !== '') {
+    //         let retries = 0;
+    //         const id = hash.replace('#', '');
+    //         const scroll = () => {
+    //             retries += 0;
+    //             if (retries > 50) return;
+    //             const element = document.getElementById(id);
+    //             if (element) {
+    //             setTimeout(() => element.scrollIntoView({ behavior: 'smooth' }),250);
+    //             } else {
+    //                 setTimeout(scroll, 100);
+    //             }
+    //         };
+    //         scroll
+    //     }
+    // }
 
     useEffect(() => {
         setUpObserver()
@@ -39,7 +39,7 @@ const Home = () => {
         if (anchor) {
             const anchorElement = document.getElementById(anchor);
             if (anchorElement) {
-                anchorElement.scrollIntoView();
+                setTimeout(() => anchorElement.scrollIntoView({ block: "start", behavior: 'smooth' }), 100);
             }
         }
     }, []);

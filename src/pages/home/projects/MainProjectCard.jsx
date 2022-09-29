@@ -1,4 +1,4 @@
-import { Router, Route, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const MainProjectCard = ({project}) => {
   return (
@@ -14,7 +14,6 @@ const MainProjectCard = ({project}) => {
                 <a className="link project" href="#">Demo <span>&#x2197;</span></a>
                 <a className="link project" href="#">Code <span>&#x2197;</span></a>
                 <Link className="link project" to={`/project-write-up/${project.URL}`}>Write Up</Link>
-                {/* <a className="link project" href="#">Write Up</a> */}
             </div>
         </div>
     </div>

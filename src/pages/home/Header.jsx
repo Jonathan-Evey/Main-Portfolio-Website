@@ -45,11 +45,11 @@ const location = useLocation();
     <header> 
         <nav className="container main-nav">
             <div>
-              <button onClick={scrollToHero} className="btn main-btn underline | fs-600 fw-bold">main</button>
+              <button onClick={scrollToHero} className="btn main-btn nav-btn underline | fs-600 fw-bold">main</button>
             </div>
             <div>
-                <button onClick={scrollToProjects} className="btn projects-btn underline show | fs-600 fw-bold">projects</button>
-                <button onClick={scrollToContact} className="btn contact-btn underline show | fs-600 fw-bold margin-inline-start-36">contact</button>
+                <button onClick={scrollToProjects} className="btn projects-btn nav-btn underline show | fs-600 fw-bold">projects</button>
+                <button onClick={scrollToContact} className="btn contact-btn nav-btn underline show | fs-600 fw-bold margin-inline-start-36">contact</button>
             </div>
         </nav>
         <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>

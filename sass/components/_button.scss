@@ -4,6 +4,7 @@
     position: relative;
     cursor: pointer;
     text-transform: uppercase;
+	text-align: center;
     font-family: $ff-accent;
     border: none;
     background-color: transparent;
@@ -19,9 +20,7 @@
 	pointer-events: none;
 	transition: all 350ms ease-in-out;
 
-	&.main-btn,
-	&.projects-btn,
-	&.contact-btn {
+	&.nav-btn {
 		@media (max-width: 725px) {
 			translate: 0 0;
 			opacity: 1;
@@ -29,16 +28,10 @@
 			width: 100%;
 			border-bottom: 1px solid clr(neutral, dark);
 			background: transparent;
+			margin-inline-start: 0;
 		}
 		&::after {
 			border-bottom: 1px solid clr(neutral, lightest);
-		}
-	}
-
-	&.contact-btn {
-		
-		@media (max-width: 725px) {
-			margin-inline-start: 0;
 		}
 	}
 

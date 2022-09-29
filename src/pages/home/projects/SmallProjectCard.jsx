@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const SmallProjectCard = ({project}) => {
   return (
     <div className="card-small-project | clr-neutral-lightest padding-block-32 margin-block-end-144">
@@ -16,7 +18,7 @@ const SmallProjectCard = ({project}) => {
             <div className="container-project-links">
                 <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a>
                 <a className="link project" href={project.link.code}>Code<span>&#x2197;</span></a>
-                <a className="link project" href="#">Write Up</a>
+                <Link className="link project" to={`/project-write-up/${project.URL}`}>Write Up</Link>
             </div>
         </div>
     </div>
