@@ -61,6 +61,8 @@ const allProjects = {
 			img: [
 				"/src/assets/restaurant-one.PNG",
 				"/src/assets/restaurant-two.PNG",
+				"/src/assets/test-img.jpg",
+				"/src/assets/test-img-two.jpg",
 			],
 			link: {
 				demo: "https://nighistheend.github.io/top-restaurant-page/",
