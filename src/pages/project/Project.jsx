@@ -2,13 +2,46 @@ import { useState } from "react"
 
 const Project = ({project}) => {
 
-    const [imgNumber, seImgNumber] = useState(0)
+    const [imgNumber, setImgNumber] = useState(0)
+
+    const updateImg = (num) => {
+        let nextImage = imgNumber + num
+        console.log(nextImage)
+        if(nextImage >= project.img.length) {
+            console.log(nextImage)
+            setImgNumber(0)
+        } else if (nextImage < 0) {
+            console.log(nextImage)
+            setImgNumber(project.img.length - 1)
+        } else {
+            console.log(nextImage)
+            setImgNumber(nextImage)
+        }
+    }
+
+    const targetImg = (num) => {
+        let lastImage = imgNumber
+        let newImage = num
+        if(newImage != imgNumber) {
+            if(newImage < lastImage) {
+                setTimeout(() => {
+               return setImgNumber(lastImage - 1);
+                }, 250)
+            }
+            if(newImage > lastImage) {
+                setTimeout(() => {
+                    return setImgNumber(lastImage + 1);
+                }, 250)
+            }
+        }
+        setImgNumber(newImage);
+    }
 
    
   return (
     <main>
-        <section className="section">
-            <div className="container | padding-block-128 grid-two-column-size-60-40">
+        <section className="section section-project-page">
+            <div className="container | padding-block-start-128 padding-block-end-80  grid-two-column-size-60-40">
                 <div className="padding-inline-end-96">
                     <h1 className="title project-page | fs-900 fw-bold">{project.title}</h1>
                     <div className="flex margin-block-start-16">
@@ -22,8 +55,18 @@ const Project = ({project}) => {
                         <a className="link project" href={project.link.code}>Code<span>&#x2197;</span></a>
                     </div>
                 </div>
-                <div>
-                    <img src={project.img[`${imgNumber}`]} alt="" />
+                <div className="card-img-carousel">
+                    {/* <img src={project.img[`${imgNumber}`]} alt="" /> */}
+                    {project.img.map((each, index) => <img className={`${index === imgNumber ? "current" : ''} ${index === imgNumber + 1 || (index === 0 && imgNumber === project.img.length - 1 ) ? "right" : ''} ${index === imgNumber - 1 || (index === project.img.length - 1 && imgNumber === 0) ? "left" : ''}`} key={index} src={each} alt="" />)}
+                    <div className="img-carousel-control">
+                        <button onClick={() => updateImg(-1)} className="img-control-btn previous-btn"><div className="accent-font">^</div></button>
+                        <div className="img-number-container">
+                        
+                            {project.img.map((each, index) => <div key={index} className={`${index === imgNumber ? "current-img" : ''} img-btn-wrapper`}><button onClick={() => targetImg(index)} className="img-btn"></button></div>
+                            )}
+                        </div>
+                        <button onClick={() => updateImg(1)} className="img-control-btn next-btn"><div className="accent-font">^</div></button>
+                    </div>
                 </div>
                 
             </div>
