@@ -105,4 +105,12 @@
        }
     }
 
+    &-project-page {
+        height: 100vh;
+        overflow-y: hidden;
+        & .container {
+            height: 100%;
+        }
+    }
+
 }

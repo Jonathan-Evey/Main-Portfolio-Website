@@ -8,7 +8,7 @@
     font-family: $ff-accent;
     border: none;
     background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent, 35%, clr(neutral, no-color-black));
+    background-image: linear-gradient(to bottom, transparent, 25%, clr(neutral, no-color-black));
     color: clr(neutral, no-color-white);
     border-bottom: 3px solid clr(neutral, no-color-white);
     padding: 1.5rem 0;
@@ -242,6 +242,42 @@
 					transition: transform 350ms ease-in-out 750ms, opacity 350ms ease-in-out 500ms,  width 600ms ease-in-out 500ms;
 				}
 			}
+		}
+	}
+}
+
+.img-control-btn {
+	width: 25%;
+	border: none;
+	background-color: transparent;
+	font-size: 8rem;
+	color: whitesmoke;
+	cursor: pointer;
+
+	& div {
+		pointer-events: none;
+	}
+	
+
+	&.previous-btn {
+		position: relative;
+		background-image: linear-gradient(to right, rgba(0,0,0, 0.5), transparent 75%);
+		& div {
+			transform: translateX(-1rem) rotate(-0.25turn);
+		}
+
+		&:hover {
+			background-image: linear-gradient(to right, rgba(0,0,0, 0.75), 50%, transparent);
+		}
+	}
+
+	&.next-btn {
+		background-image: linear-gradient(to left, rgba(0,0,0, 0.5), transparent 75%);
+		& div {	
+			transform: translateX(1rem) rotate(0.25turn);
+		}
+		&:hover {
+			background-image: linear-gradient(to left, rgba(0,0,0, 0.75), 50%, transparent);
 		}
 	}
 }
