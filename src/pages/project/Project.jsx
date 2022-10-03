@@ -20,29 +20,15 @@ const Project = ({project}) => {
     }
 
     const targetImg = (num) => {
-        let lastImage = imgNumber
-        let newImage = num
-        if(newImage != imgNumber) {
-            if(newImage < lastImage) {
-                setTimeout(() => {
-               return setImgNumber(lastImage - 1);
-                }, 250)
-            }
-            if(newImage > lastImage) {
-                setTimeout(() => {
-                    return setImgNumber(lastImage + 1);
-                }, 250)
-            }
-        }
-        setImgNumber(newImage);
+        setImgNumber(num)
     }
 
    
   return (
     <main>
         <section className="section section-project-page">
-            <div className="container | padding-block-start-128 padding-block-end-80  grid-two-column-size-60-40">
-                <div className="padding-inline-end-96">
+            <div className="container | padding-block-start-128 padding-block-end-80  flex">
+                <div className="padding-inline-end-96 flex-1">
                     <h1 className="title project-page | fs-900 fw-bold">{project.title}</h1>
                     <div className="flex margin-block-start-16">
                         {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}
