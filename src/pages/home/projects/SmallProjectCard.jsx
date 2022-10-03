@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const SmallProjectCard = ({project}) => {
   return (
-    <div className="card-small-project | clr-neutral-lightest padding-block-32 margin-block-end-144">
+    <div className="card-small-project | clr-neutral-lightest padding-block-32">
         <div className="container-project-img | margin-block-end-56">
             <img className="shadow-500" src={project.img[0]} alt="" />
             <img className="shadow-500" src={project.img[1]} alt="" />

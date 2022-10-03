@@ -85,9 +85,11 @@
         }
     }
 
-    // main &:nth-child(2) {
-    //     padding-top: 20rem;
-    // } 
+    main &:nth-child(2) {
+        overflow: hidden;
+        height: fit-content;
+       
+    } 
 
     &.contact  {
         position: relative;
