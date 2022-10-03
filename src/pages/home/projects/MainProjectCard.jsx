@@ -9,7 +9,12 @@ const MainProjectCard = ({project}) => {
         </div>
         <div className="container-project-text | padding-block-48">
             <h4 className="title | clr-neutral-no-color-white fs-700 fw-bold margin-inline-end-32 ">{project.title}</h4>
-            <p className="fs-400 margin-block-start-20">{project.description}</p>
+            <div className="flex margin-block-start-16">
+              {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}
+            </div>
+            <div>
+              {project.description.map((each, index) => <p className="fs-400 margin-block-end-12" key={index}>{each}</p>)}
+            </div>
             <div className="container-project-links">
                 <a className="link project" href="#">Demo <span>&#x2197;</span></a>
                 <a className="link project" href="#">Code <span>&#x2197;</span></a>
