@@ -43,7 +43,7 @@ const setUpObserver = () => {
 			});
 		},
 		{
-			threshold: 0.65,
+			threshold: 0.25,
 		}
 	);
 	contactObserver.observe(eachSection[2]);

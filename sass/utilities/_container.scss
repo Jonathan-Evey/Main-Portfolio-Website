@@ -1,8 +1,12 @@
 @use "../abstracts/" as *;
 
 .container {
-  width: min(100% - 12rem);
+  width: min(100% - 22rem);
   margin-inline: auto;
+
+  @media (max-width: 1350px) {
+    width: min(100% - 12rem);
+  }
 
   @media (max-width: 900px) {
     width: min(100% - 6rem);
@@ -92,28 +96,38 @@
     }
   }
 
-  &.find-me,
   &.contact {
-    width: 100%;
+    & p,
+    & form {
+      margin-inline: auto;
+      max-width: 66%;
+
+      @media (max-width: 1250px) {
+        max-width: 75%;
+      }
+      @media (max-width: 1100px) {
+        max-width: 85%;
+      }
+      @media (max-width: 700px) {
+        max-width: 95%;
+      }
+    }
   }
 
   &.contact {
-    @media (max-width: 900px) {
-      padding-inline: 3rem;
-    }
     @media (max-width: 500px) {
       padding-inline: 1.5rem;
     }
 
     & .grid-two-column {
-      @media (max-width: 675px) {
+      @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
         gap: 0;
       }
     }
     & .grid-two-column div:first-child {
-      @media (max-width: 675px) {
+      @media (max-width: 800px) {
         margin-block-end: 1.5rem;
       }
     }
@@ -122,13 +136,12 @@
 
   &.find-me {
     margin-block: auto;
+    margin-block-end: 7rem;
     @media (max-width: 1250px) {
-      padding-inline-start: 6rem;
+      
       margin-block-end: 4.5rem;
     }
-    @media (max-width: 900px) {
-      padding-inline-start: 3rem;
-    }
+    
     @media (max-width: 500px) {
       padding-inline: 1.5rem;
     }

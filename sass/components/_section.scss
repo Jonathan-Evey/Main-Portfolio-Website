@@ -94,7 +94,7 @@
     &.contact  {
         position: relative;
         display: grid;
-        grid-template-columns: 4fr 3fr;
+        // grid-template-columns: 4fr 3fr;
         overflow: hidden;
 
        @media (max-width: 1250px) {

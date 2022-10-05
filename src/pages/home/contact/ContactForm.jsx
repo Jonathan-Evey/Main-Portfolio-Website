@@ -1,6 +1,6 @@
 const ContactForm = () => {
   return (
-    <form className="padding-inline-24 margin-block-end-56" action="">
+    <form className="margin-block-end-96" action="">
         <div className="grid-two-column margin-block-end-24">
             <div className="flex-column">
                 <label htmlFor="">name</label>
