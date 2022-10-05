@@ -40,7 +40,7 @@ const allProjects = {
 			languages: ["React", "SASS", "Figma", "Firebase"],
 			description: [
 				"Personal project designed to showcase current projects.",
-				"Site is built with React, and utilized Vite in the development process.",
+				"Site is built with React, utilizing React Router for page URL updates, and Vite for the development process.",
 				"Design and mock-up by self creacted within Figma.",
 				"Site layout was created using SASS, and is responsive to accommodate both desktop and mobile views",
 				"Deployed with Firebase",
@@ -62,7 +62,7 @@ const allProjects = {
 			description: [
 				"Project was an assignment from The Odin Project course.",
 				"Project is built with vanilla JavaScript to create the differant Project and Task elements, and controls user interface.",
-				"Design and layout created using CSS. Project design is responsive to accommodate both desktop and mobile views",
+				"Design and layout created using CSS.",
 				"Project utilizes local storage to save user data",
 			],
 			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
