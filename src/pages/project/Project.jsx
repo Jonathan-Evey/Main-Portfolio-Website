@@ -28,7 +28,7 @@ const Project = ({project}) => {
     <main>
         <section className="section section-project-page">
             <div className="container | padding-block-start-128 padding-block-end-80  flex">
-                <div className="padding-inline-end-96 flex-1">
+                <div className="project-wright-up | padding-inline-end-96 flex-1">
                     <h1 className="title project-page | fs-900 fw-bold">{project.title}</h1>
                     <div className="flex margin-block-start-16">
                         {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}
@@ -43,7 +43,7 @@ const Project = ({project}) => {
                 </div>
                 <div className="card-img-carousel">
                     {/* <img src={project.img[`${imgNumber}`]} alt="" /> */}
-                    {project.img.map((each, index) => <img className={`${index === imgNumber ? "current" : ''} ${index === imgNumber + 1 || (index === 0 && imgNumber === project.img.length - 1 ) ? "right" : ''} ${index === imgNumber - 1 || (index === project.img.length - 1 && imgNumber === 0) ? "left" : ''}`} key={index} src={each} alt="" />)}
+                    {project.img.map((each, index) => <img className={`${index === imgNumber ? "current" : ''}${index === imgNumber + 1 || (index === 0 && imgNumber === project.img.length - 1 ) ? "right" : ''}${index === imgNumber - 1 || (index === project.img.length - 1 && imgNumber === 0) ? "left" : ''}${project.desktopImgs[index] === "yes" ? " desktop-img" : "" }`} key={index} src={each} alt="" />)}
                     <div className="img-carousel-control">
                         <button onClick={() => updateImg(-1)} className="img-control-btn previous-btn"><div className="accent-font">^</div></button>
                         <div className="img-number-container">

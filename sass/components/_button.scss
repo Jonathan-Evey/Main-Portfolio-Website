@@ -264,6 +264,9 @@
 		background-image: linear-gradient(to right, rgba(0,0,0, 0.5), transparent 75%);
 		& div {
 			transform: translateX(-1rem) rotate(-0.25turn);
+			@media (max-width: 500px) {
+				transform: translateX(0) rotate(-0.25turn);
+			}
 		}
 
 		&:hover {
@@ -275,6 +278,9 @@
 		background-image: linear-gradient(to left, rgba(0,0,0, 0.5), transparent 75%);
 		& div {	
 			transform: translateX(1rem) rotate(0.25turn);
+			@media (max-width: 500px) {
+				transform: translateX(0) rotate(0.25turn);
+			}
 		}
 		&:hover {
 			background-image: linear-gradient(to left, rgba(0,0,0, 0.75), 50%, transparent);

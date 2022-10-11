@@ -2,8 +2,8 @@
 
 .bg-large-sphere {
     position: absolute;
-    height: 65vw;
-    width: 65vw;
+    height: 50vw;
+    width: 50vw;
     background-color: clr(neutral, darkest);
     border-radius: 100%;
     z-index: -1;
@@ -22,12 +22,12 @@
 
     &.contact {
         
-        translate: 65% 65%;
+        translate: 85% 65%;
         @media (max-width: 1700px) {
-            translate: 65% 70%;
+            translate: 85% 70%;
         }
         @media (max-width: 1550px) {
-            translate: 65% 80%;
+            translate: 85% 90%;
         }
         @media (max-width: 1350px) {
             translate: 45% 75%;

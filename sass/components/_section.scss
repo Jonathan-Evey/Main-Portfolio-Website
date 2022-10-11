@@ -110,8 +110,21 @@
     &-project-page {
         height: 100vh;
         overflow-y: hidden;
+
+        @media (max-width: 1200px) {
+            height: auto;
+        }
+
         & .container {
             height: 100%;
+
+            @media (max-width: 1200px) {
+                flex-direction: column-reverse;
+            }
+
+            @media (max-width: 725px) {
+                padding-block-start: 5rem;
+            }
         }
     }
 

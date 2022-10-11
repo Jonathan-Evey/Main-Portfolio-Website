@@ -161,7 +161,7 @@
         margin-inline: auto;
 
         &:not(:last-child) {
-            @media (max-width: 500px) {
+            @media (max-width: 1000px) {
                 margin-block-end: 6rem;
               }
         }
@@ -242,6 +242,21 @@
         overflow-x: hidden;
         max-width: 550px;
         flex: 1;
+
+        @media (max-width: 1200px) {
+            min-height: 550px;
+            max-width: 100%;
+            flex: 0;
+        }
+
+        @media (max-width: 650px) {
+            min-height: 650px;
+        }
+
+        @media (max-width: 550px) {
+            min-height: 500px;
+        }
+
         & img {
             position: absolute;
             display: none;
@@ -251,6 +266,18 @@
             height: 100%;
             transition: all 250ms ease-in-out;
             object-fit: scale-down;
+
+            @media (max-width: 650px) {
+                object-fit: cover;
+
+                &.desktop-img {
+                    object-fit: scale-down;
+                    @media (max-width: 350px) {
+                        object-fit: cover;
+                        object-position: top left;
+                    }
+                }
+            }
 
             &.left {
                 display: inline;

@@ -31,8 +31,8 @@ const allProjects = {
 			],
 			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
 			link: {
-				demo: "",
-				code: "",
+				demo: "https://nighistheend.github.io/book-shelf/",
+				code: "https://github.com/NighIsTheEnd/book-shelf",
 				projectPage: "",
 			},
 		},
@@ -66,7 +66,7 @@ const allProjects = {
 			languages: ["JavaScript", "CSS", "WebPack"],
 			description: [
 				"Project is an assignment from The Odin Project course.",
-				"Assignment was to creat and save projects, with a title, description, completion due date, and a priority rating. On each project user can add tasks that can be maked complete, or not.",
+				"Assignment was to creat and save a Todo list. Each Todo needed to have a title, description, completion due date, and a priority rating. On each Todo user can add tasks that can be maked complete, or not.",
 				"Functionality is controlled with JavaScript.  Design and layout created with CSS.",
 				"Project utilizes local storage to save user data.",
 			],
@@ -78,6 +78,7 @@ const allProjects = {
 				"/src/assets/project-manager-four.PNG",
 				"/src/assets/project-manager-five.PNG",
 			],
+			desktopImgs: ["no", "no", "yes", "yes", "no", "no"],
 			link: {
 				demo: "https://nighistheend.github.io/Project-Manager-Dashboard/",
 				code: "https://github.com/NighIsTheEnd/Project-Manager-Dashboard",
@@ -95,6 +96,7 @@ const allProjects = {
 				"Site is built with JavaScript. Design and styling done using CSS.",
 				"Site is responsive to accommodate both desktop and mobile views.",
 			],
+			wrightUp: [],
 			img: [
 				"/src/assets/restaurant-one.PNG",
 				"/src/assets/restaurant-two.PNG",

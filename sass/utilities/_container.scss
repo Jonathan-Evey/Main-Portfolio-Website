@@ -13,7 +13,7 @@
   }
 
   @media (max-width: 500px) {
-    width: min(100% - 3rem);
+    width: min(100% - 5rem);
   }
 
   header & {
@@ -149,8 +149,20 @@
 
   &.project-page-links {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+    align-self: flex-end;
     width: 100%;
+    height: fit-content;
     margin-inline: 0;
+  }
+
+  & .project-wright-up {
+    @media (max-width: 1200px) {
+      margin-block-start: 1rem;
+      padding-inline-end: 0;
+      padding-inline: 1rem;
+    }
+    
   }
 }
