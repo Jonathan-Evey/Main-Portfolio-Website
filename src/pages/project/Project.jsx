@@ -34,7 +34,16 @@ const Project = ({project}) => {
                         {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}
                     </div>
                     <div>
-                        {project.description.map((each, index) => <p className="fs-300 margin-block-end-8" key={index}>{each}</p>)}
+                        {/* {project.description.map((each, index) => <p className="fs-300 margin-block-end-8" key={index}>{each}</p>)} */}
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Summary</h5>
+                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.projectSummary}</p>
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Main Challenges and Achievements</h5>
+                        {project.wrightUp.mainChallenges.map((each, index) => <p className="fs-400 padding-inline-8 margin-block-end-12" key={index}>{each}</p>)}
+                        
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Overview</h5>
+                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.Overview}</p>
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Completion Date</h5>
+                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.completionDate}</p>
                     </div>
                     <div className="container project-page-links">
                         <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a>
