@@ -10,7 +10,7 @@ const allProjects = {
 				"Project utilization is to easily showcase completed projects, displaying current skills and abilities, and providing a convenient source to get in contact.",
 				// "Site is built with React, utilizing React Router for page URL updates, and Vite for the development process.",
 				// "Design and mock-up by self creacted within Figma.",
-				"Main resources used in project React/JavaScript to handle interactions with SASS for site styling.",
+				"Main resources used in project are React/JavaScript to handle interactions with SASS for site styling.",
 				//"Site layout was created using SASS, and is responsive to accommodate both desktop and mobile views",
 				"Deployed with Firebase.",
 			],
@@ -42,7 +42,14 @@ const allProjects = {
 				//"Book infromation is pull using Google Books API",
 				//"Design and layout created using CSS. Project design is responsive to accommodate both desktop and mobile views",
 			],
-			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
+			img: [
+				"/assets/book-shelf-two.PNG",
+				"/assets/book-shelf-three.PNG",
+				"/assets/book-shelf-one.PNG",
+				"/assets/book-shelf-four.PNG",
+				"/assets/book-shelf-five.PNG",
+				"/assets/book-shelf-six.PNG",
+			],
 			desktopImgs: ["no", "no", "yes", "yes", "no", "no"],
 			wrightUp: {
 				projectSummary:
@@ -97,12 +104,12 @@ const allProjects = {
 				"Project utilizes local storage to save user data.",
 			],
 			img: [
-				"/src/assets/project-manager-six.PNG",
-				"/src/assets/project-manager-three.PNG",
-				"/src/assets/project-manager-one.PNG",
-				"/src/assets/project-manager-two.PNG",
-				"/src/assets/project-manager-four.PNG",
-				"/src/assets/project-manager-five.PNG",
+				"/assets/project-manager-six.PNG",
+				"/assets/project-manager-three.PNG",
+				"/assets/project-manager-one.PNG",
+				"/assets/project-manager-two.PNG",
+				"/assets/project-manager-four.PNG",
+				"/assets/project-manager-five.PNG",
 			],
 			desktopImgs: ["no", "no", "yes", "yes", "no", "no"],
 			wrightUp: {
@@ -149,12 +156,12 @@ const allProjects = {
 			},
 
 			img: [
-				"/src/assets/restaurant-one.PNG",
-				"/src/assets/restaurant-two.PNG",
-				"/src/assets/restaurant-three.PNG",
-				"/src/assets/restaurant-four.PNG",
-				"/src/assets/restaurant-five.PNG",
-				"/src/assets/restaurant-six.PNG",
+				"/assets/restaurant-page-one.PNG",
+				"/assets/restaurant-page-two.PNG",
+				"/assets/restaurant-page-three.PNG",
+				"/assets/restaurant-page-four.PNG",
+				"/assets/restaurant-page-five.PNG",
+				"/assets/restaurant-page-six.PNG",
 			],
 			link: {
 				demo: "https://nighistheend.github.io/top-restaurant-page/",

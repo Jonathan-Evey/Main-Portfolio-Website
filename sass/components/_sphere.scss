@@ -10,6 +10,17 @@
 
     &.hero {
         translate: -20% -35%;
+
+        .ring {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid #3b3b3b;
+            animation: animation linear 60s infinite;
+        }
+
         @media (max-width: 900px) {
             height: 90vw;
             width: 90vw;
@@ -72,3 +83,15 @@
         }
     }
 }
+
+@keyframes animation {
+    0% {
+      transform: rotatez(0) scalex(1);
+    }
+    50% {
+      transform: rotatez(calc(180deg - (7.5deg * var(--i)))) scalex(0.1);
+    }
+    100% {
+      transform: rotatez(360deg) scalex(1);
+    }
+  }

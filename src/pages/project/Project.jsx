@@ -23,6 +23,8 @@ const Project = ({project}) => {
         setImgNumber(num)
     }
 
+    //${project.desktopImgs[index] === "yes" ? " desktop-img" : "" }
+
    
   return (
     <main>
@@ -52,7 +54,7 @@ const Project = ({project}) => {
                 </div>
                 <div className="card-img-carousel">
                     {/* <img src={project.img[`${imgNumber}`]} alt="" /> */}
-                    {project.img.map((each, index) => <img className={`${index === imgNumber ? "current" : ''}${index === imgNumber + 1 || (index === 0 && imgNumber === project.img.length - 1 ) ? "right" : ''}${index === imgNumber - 1 || (index === project.img.length - 1 && imgNumber === 0) ? "left" : ''}${project.desktopImgs[index] === "yes" ? " desktop-img" : "" }`} key={index} src={each} alt="" />)}
+                    {project.img.map((each, index) => <img className={`${index === imgNumber ? "current" : ''}${index === imgNumber + 1 || (index === 0 && imgNumber === project.img.length - 1 ) ? "right" : ''}${index === imgNumber - 1 || (index === project.img.length - 1 && imgNumber === 0) ? "left" : ''}`} key={index} src={each} alt="" />)}
                     <div className="img-carousel-control">
                         <button onClick={() => updateImg(-1)} className="img-control-btn previous-btn"><div className="accent-font">^</div></button>
                         <div className="img-number-container">
