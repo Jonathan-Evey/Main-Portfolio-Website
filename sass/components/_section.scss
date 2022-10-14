@@ -91,6 +91,12 @@
        
     } 
 
+    &.projects {
+        @media (max-width: 500px) {
+            padding-block-end: 3rem;
+        }
+    }
+
     &.contact  {
         position: relative;
         display: grid;

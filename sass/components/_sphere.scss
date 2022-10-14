@@ -18,7 +18,7 @@
             width: 100%;
             border-radius: 50%;
             border: 2px solid #3b3b3b;
-            animation: animation linear 60s infinite;
+            animation: animation linear 30s infinite;
         }
 
         @media (max-width: 900px) {
@@ -80,6 +80,16 @@
         }
         @media (max-width: 325px) {
             translate: 35% 285%;
+        }
+
+        & .ring {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid #3b3b3b;
+            animation: animation linear 60s infinite;
         }
     }
 }
