@@ -41,12 +41,18 @@ const Project = ({project}) => {
                         {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}
                     </div>
                     <div>
-                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Summary</h5>
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Description and Uses</h5>
                         <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.projectSummary}</p>
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Overview</h5>
+                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.overview}</p>
                         <h5 className="fs-600 fw-bold margin-block-end-16">Main Challenges and Achievements</h5>
                         {project.wrightUp.mainChallenges.map((each, index) => <p className="fs-400 padding-inline-8 margin-block-end-12" key={index}>{each}</p>)}
-                        <h5 className="fs-600 fw-bold margin-block-end-16">Overview</h5>
-                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.Overview}</p>
+                        {project.wrightUp.commentsTakeaways !== "" ? 
+                        <>
+                            <h5 className="fs-600 fw-bold margin-block-end-16">Comments and Takeaways</h5>
+                            <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.commentsTakeaways}</p>
+                        </> : null}
+                        
                         <h5 className="fs-600 fw-bold margin-block-end-16">Project Completion Date</h5>
                         <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.completionDate}</p>
                     </div>
