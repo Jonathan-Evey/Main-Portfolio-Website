@@ -18,7 +18,7 @@ const MainProjectCard = ({project}) => {
             <div className="container-project-links">
                 <a className="link project" href={project.link.demo}>Demo <span>&#x2197;</span></a>
                 <a className="link project" href={project.link.code}>Code <span>&#x2197;</span></a>
-                <Link className="link project" to={`/project-write-up/${project.URL}`}>Write Up</Link>
+                <Link className="link project" to={`/project-write-up/${project.URL}`}>Overview</Link>
             </div>
         </div>
     </div>
