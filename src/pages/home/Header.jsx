@@ -1,9 +1,10 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom"
 
 const Header = (props) => {
 
-const location = useLocation();
+  const [currentPage, setCurrentPage] = useState(null)
+
 
   const toggleMenu = (e) => {
     document.querySelector(".main-nav").classList.toggle("open");
@@ -38,12 +39,14 @@ const location = useLocation();
   }
 
   useEffect(() => {
-    console.log(location);
-  }, [location]);
+    setCurrentPage(props.page)
+  })
 
   return (
-    <header> 
-        <nav className="container main-nav">
+    <header>
+      {currentPage === "Home" ? 
+        <>
+          <nav className="container main-nav">
             <div>
               <button onClick={scrollToHero} className="btn main-btn nav-btn underline | fs-600 fw-bold">main</button>
             </div>
@@ -51,10 +54,27 @@ const location = useLocation();
                 <button onClick={scrollToProjects} className="btn projects-btn nav-btn underline | fs-600 fw-bold">projects</button>
                 <button onClick={scrollToContact} className="btn contact-btn nav-btn underline | fs-600 fw-bold margin-inline-start-36">contact</button>
             </div>
-        </nav>
-        <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>
-        <div className="nav-icon-display"></div>
-        <div className="nav-icon-display-two"></div>
+          </nav>
+          <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>
+          <div className="nav-icon-display"></div>
+          <div className="nav-icon-display-two"></div>
+        </> : null } 
+      {currentPage === "ProjectPage" ? 
+        <>
+          <nav className="container main-nav">
+                <div>
+                    <Link to={`/`} className="btn nav-btn underline show | fs-600 fw-bold">Main</Link>
+                </div>
+                <div>
+                    <Link to={`/#projects`} className="btn nav-btn underline show | fs-600 fw-bold">projects</Link>
+                    <Link to={`/#contact`} className="btn nav-btn underline show | fs-600 fw-bold margin-inline-start-36">Contact</Link>
+                </div>
+            </nav>
+            <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>
+            <div className="nav-icon-display"></div>
+            <div className="nav-icon-display-two"></div>
+        </> : null } 
+        
     </header>
   )
 }
