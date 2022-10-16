@@ -10,6 +10,7 @@ label {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: $fw-700;
+    margin-block-end: 0.25rem;
 }
 
 input {
@@ -24,4 +25,18 @@ textarea {
     background-color: clr(neutral, lightest);
     border: none;
     border-radius: 2px;
+}
+
+textarea.error,
+input.error {
+	outline: 2px solid #e53e3e;
+}
+
+label.error{
+    color: #e53e3e;
+}
+
+div.error {
+	color: #e53e3e;
+	margin-block-start: 0.5rem;
 }
