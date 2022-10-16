@@ -100,7 +100,6 @@
     &.contact  {
         position: relative;
         display: grid;
-        // grid-template-columns: 4fr 3fr;
         overflow: hidden;
 
        @media (max-width: 1250px) {
@@ -120,7 +119,7 @@
         }
 
         & .container:first-child {
-
+            flex-direction: row-reverse;
             @media (max-width: 1200px) {
                 flex-direction: column;
             }

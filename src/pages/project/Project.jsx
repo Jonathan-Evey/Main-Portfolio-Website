@@ -6,15 +6,11 @@ const Project = ({project}) => {
 
     const updateImg = (num) => {
         let nextImage = imgNumber + num
-        console.log(nextImage)
         if(nextImage >= project.img.length) {
-            console.log(nextImage)
             setImgNumber(0)
         } else if (nextImage < 0) {
-            console.log(nextImage)
             setImgNumber(project.img.length - 1)
         } else {
-            console.log(nextImage)
             setImgNumber(nextImage)
         }
     }
@@ -39,7 +35,7 @@ const Project = ({project}) => {
                         <button onClick={() => updateImg(1)} className="img-control-btn next-btn"><div className="accent-font">^</div></button>
                     </div>
                 </div>
-                <div className="project-wright-up | padding-inline-start-96 flex-1">
+                <div className="project-wright-up | padding-inline-end-96 flex-1">
                     <h1 className="title project-page | fs-900 fw-bold">{project.title}</h1>
                     <div className="flex margin-block-start-16">
                         {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}

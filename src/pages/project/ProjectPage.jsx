@@ -17,7 +17,6 @@ const ProjectPage = () => {
     })
 
     if(!project) {
-        console.log(project)
         return(<ErrorPage />)
     }
 

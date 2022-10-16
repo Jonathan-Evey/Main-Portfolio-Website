@@ -6,16 +6,13 @@ import ErrorPage from "./pages/404/ErrorPage";
 const App = () => {
 
     return (
-    <>
-        
+
         <Routes>
-            
-            {/* <Route path="/home" element={<Home />} /> */}
             <Route path="/project-write-up/*" element={<ProjectRoutes />} />
             <Route exact path="/" element={<Home />} />
             <Route path="/*" element={<ErrorPage />} />
         </Routes>
-    </>
+
     )
 }
 
