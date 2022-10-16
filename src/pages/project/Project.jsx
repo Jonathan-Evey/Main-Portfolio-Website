@@ -22,38 +22,12 @@ const Project = ({project}) => {
     const targetImg = (num) => {
         setImgNumber(num)
     }
-
-    //${project.desktopImgs[index] === "yes" ? " desktop-img" : "" }
-
    
   return (
     <main>
         <section className="section section-project-page">
             <div className="container | padding-block-start-128 padding-block-end-80  flex">
-                <div className="project-wright-up | padding-inline-end-96 flex-1">
-                    <h1 className="title project-page | fs-900 fw-bold">{project.title}</h1>
-                    <div className="flex margin-block-start-16">
-                        {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}
-                    </div>
-                    <div>
-                        {/* {project.description.map((each, index) => <p className="fs-300 margin-block-end-8" key={index}>{each}</p>)} */}
-                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Summary</h5>
-                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.projectSummary}</p>
-                        <h5 className="fs-600 fw-bold margin-block-end-16">Main Challenges and Achievements</h5>
-                        {project.wrightUp.mainChallenges.map((each, index) => <p className="fs-400 padding-inline-8 margin-block-end-12" key={index}>{each}</p>)}
-                        
-                        <h5 className="fs-600 fw-bold margin-block-end-16">Overview</h5>
-                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.Overview}</p>
-                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Completion Date</h5>
-                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.completionDate}</p>
-                    </div>
-                    <div className="container project-page-links">
-                        <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a>
-                        <a className="link project" href={project.link.code}>Code<span>&#x2197;</span></a>
-                    </div>
-                </div>
                 <div className="card-img-carousel">
-                    {/* <img src={project.img[`${imgNumber}`]} alt="" /> */}
                     {project.img.map((each, index) => <img className={`${index === imgNumber ? "current" : ''}${index === imgNumber + 1 || (index === 0 && imgNumber === project.img.length - 1 ) ? "right" : ''}${index === imgNumber - 1 || (index === project.img.length - 1 && imgNumber === 0) ? "left" : ''}`} key={index} src={each} alt="" />)}
                     <div className="img-carousel-control">
                         <button onClick={() => updateImg(-1)} className="img-control-btn previous-btn"><div className="accent-font">^</div></button>
@@ -65,7 +39,26 @@ const Project = ({project}) => {
                         <button onClick={() => updateImg(1)} className="img-control-btn next-btn"><div className="accent-font">^</div></button>
                     </div>
                 </div>
-                
+                <div className="project-wright-up | padding-inline-start-96 flex-1">
+                    <h1 className="title project-page | fs-900 fw-bold">{project.title}</h1>
+                    <div className="flex margin-block-start-16">
+                        {project.languages.map((each, index) => <p className="clr-neutral-no-color-white fs-400 fw-bold margin-inline-start-16 margin-block-end-20" key={index}>{each}</p>)}
+                    </div>
+                    <div>
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Summary</h5>
+                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.projectSummary}</p>
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Main Challenges and Achievements</h5>
+                        {project.wrightUp.mainChallenges.map((each, index) => <p className="fs-400 padding-inline-8 margin-block-end-12" key={index}>{each}</p>)}
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Overview</h5>
+                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.Overview}</p>
+                        <h5 className="fs-600 fw-bold margin-block-end-16">Project Completion Date</h5>
+                        <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.completionDate}</p>
+                    </div>
+                    <div className="container project-page-links">
+                        <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a>
+                        <a className="link project" href={project.link.code}>Code<span>&#x2197;</span></a>
+                    </div>
+                </div>
             </div>
         
         </section>

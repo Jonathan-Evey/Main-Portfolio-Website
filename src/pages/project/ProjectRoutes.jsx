@@ -1,11 +1,11 @@
 import {Routes, Route } from "react-router-dom"
-import Projectpage from "./Projectpage"
+import ProjectPage from "./ProjectPage"
 
 
 const ProjectRoutes = () => {
   return (
     <Routes>
-        <Route path=":URL" element={<Projectpage />} />
+        <Route path=":URL" element={<ProjectPage />} />
     </Routes>
   )
 }

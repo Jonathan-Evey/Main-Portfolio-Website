@@ -1,6 +1,4 @@
-import React, { forwardRef, useRef } from 'react'
-
-const Hero = forwardRef((props, ref) => {
+const Hero = ({heroRef}) => {
 
   let rings = [];
 
@@ -9,7 +7,7 @@ const Hero = forwardRef((props, ref) => {
   }
 
   return (
-    <section className="section hero" ref={ref}>
+    <section className="section hero" ref={heroRef}>
       <div className="bg-large-sphere hero">
         {rings.map((ring, index) => (<div style={{ "--i": `${index}`}} className="ring" key={ring}></div>))}
       </div>
@@ -21,6 +19,6 @@ const Hero = forwardRef((props, ref) => {
       </div>
     </section>
   )
-});
+};
 
 export default Hero

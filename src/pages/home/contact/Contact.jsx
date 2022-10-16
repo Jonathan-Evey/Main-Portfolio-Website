@@ -1,14 +1,13 @@
-import React, { forwardRef, useRef } from 'react'
 import ContactForm from "./ContactForm"
 
-const Contact = forwardRef((props, ref) => {
+const Contact = ({contactRef}) => {
   let rings = [];
 
   for (let i = 0; i <= 5; i++) {
     rings.push(i);
   }
   return (
-    <section id='contact' className="section contact | magin-block-end-48" ref={ref}>
+    <section id='contact' className="section contact | magin-block-end-48" ref={contactRef}>
       <div className="container contact ">
         <h2 className="title | fs-900 fw-bold margin-block-end-80">Contact</h2>
         <p className="fs-500 margin-block-end-56">Have any questions, comments, or looking to work with me? Feel free to send me a message, or reach out to me on my <a href='#socials' className='link project'>socials</a>. I look forward to hearing from you.</p>
@@ -25,6 +24,6 @@ const Contact = forwardRef((props, ref) => {
       </div>
     </section>
   )
-});
+};
 
 export default Contact

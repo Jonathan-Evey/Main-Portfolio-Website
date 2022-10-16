@@ -115,21 +115,22 @@
 
     &-project-page {
         height: 100vh;
- 
-
         @media (max-width: 1200px) {
             height: auto;
         }
 
         & .container:first-child {
-        
+
             @media (max-width: 1200px) {
-                flex-direction: column-reverse;
+                flex-direction: column;
             }
 
             @media (max-width: 725px) {
                 padding-block-start: 5rem;
             }
+        }
+        & p {
+            max-width: 65ch;
         }
     }
 
