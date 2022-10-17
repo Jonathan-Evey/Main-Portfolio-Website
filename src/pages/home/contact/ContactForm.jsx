@@ -40,6 +40,7 @@ const ContactForm = () => {
         validateOnChange: validateAfterSubmit,
         onSubmit: values => {
             alert(JSON.stringify(values, null, 2));
+            setValidateAfterSubmit(false);
             formik.handleReset()
         },
     })

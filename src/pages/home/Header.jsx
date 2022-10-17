@@ -10,6 +10,7 @@ const Header = (props) => {
     document.querySelector(".main-nav").classList.toggle("open");
     document.querySelector(".nav-icon-display").classList.toggle("open");
     document.querySelector(".nav-icon-display-two").classList.toggle("open");
+    document.querySelector('.nav-btn-background-shadow').classList.toggle("open");
     e.target.classList.toggle("open");
   }
 
@@ -18,6 +19,7 @@ const Header = (props) => {
     document.querySelector(".nav-icon-display").classList.remove("open");
     document.querySelector(".nav-icon-display-two").classList.remove("open");
     document.querySelector(".toggle-nav-btn").classList.remove("open");
+    document.querySelector('.nav-btn-background-shadow').classList.remove("open");
   }
 
   const scrollToHero = (e) => {
@@ -56,6 +58,7 @@ const Header = (props) => {
             </div>
           </nav>
           <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>
+          <div className="nav-btn-background-shadow"></div>
           <div className="nav-icon-display"></div>
           <div className="nav-icon-display-two"></div>
         </> : null } 
@@ -71,6 +74,7 @@ const Header = (props) => {
                 </div>
             </nav>
             <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>
+            <div className="nav-btn-background-shadow"></div>
             <div className="nav-icon-display"></div>
             <div className="nav-icon-display-two"></div>
         </> : null } 

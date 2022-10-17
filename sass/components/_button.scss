@@ -141,6 +141,23 @@
 	}
 }
 
+.nav-btn-background-shadow {
+	@media (max-width: 725px) {
+		pointer-events: none;
+		position: absolute;
+		top: 1rem;
+		right: 1.375rem;
+		z-index: 999;
+		width: 4.5rem;
+		height: 3.5rem;
+		background-color: rgba(15, 15, 15, 0.95);
+		border-radius: 25px;
+	}
+	&.open {
+		opacity: 0;
+	}
+}
+
 .nav-icon-display {
 	@media (max-width: 725px) {
 		position: absolute;
