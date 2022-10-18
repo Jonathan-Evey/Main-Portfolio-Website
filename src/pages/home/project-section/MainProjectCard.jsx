@@ -16,7 +16,7 @@ const MainProjectCard = ({project}) => {
               {project.description.map((each, index) => <p className="fs-400 margin-block-end-12" key={index}>{each}</p>)}
             </div>
             <div className="container-project-links">
-                <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a>
+                {project.link.demo !== "" ? <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a> : null}
                 <a className="link project" href={project.link.code}>Code<span>&#x2197;</span></a>
                 <Link className="link project" to={`/project-write-up/${project.URL}`}>Overview</Link>
             </div>

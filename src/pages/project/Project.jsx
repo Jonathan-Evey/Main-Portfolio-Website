@@ -57,7 +57,7 @@ const Project = ({project}) => {
                         <p className="fs-400 padding-inline-8 margin-block-end-24">{project.wrightUp.completionDate}</p>
                     </div>
                     <div className="container project-page-links">
-                        <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a>
+                        {project.link.demo !== "" ? <a className="link project" href={project.link.demo}>Demo<span>&#x2197;</span></a> : null}
                         <a className="link project" href={project.link.code}>Code<span>&#x2197;</span></a>
                     </div>
                 </div>
