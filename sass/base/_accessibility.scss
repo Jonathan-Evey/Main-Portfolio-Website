@@ -1,0 +1,6 @@
+@media (prefers-reduced-motion: reduce) {
+    .ring {
+        transform: rotatez(calc(180deg - (7.5deg * var(--i)))) scalex(0.25);
+        animation: none !important;
+    }
+  }
