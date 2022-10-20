@@ -17,7 +17,7 @@ const Contact = ({contactRef}) => {
       <div className="container find-me">
         <h3 id="socials" className="title | fs-900 fw-bold ">Find Me</h3>
         <a className="link social | fs-600 margin-block-start-80" href="https://github.com/Jonathan-Evey">gitHub</a>
-        <a className="link social | fs-600 margin-block-start-80" href="http://">LinkedIn</a>
+        <a className="link social | fs-600 margin-block-start-80" href="https://www.linkedin.com/in/jonathan-evey/">LinkedIn</a>
       </div>
       <div className="bg-large-sphere contact">
         {rings.map((ring, index) => (<div style={{ "--i": `${index}`}} className="ring" key={ring}></div>))}

@@ -29,14 +29,43 @@ textarea {
 
 textarea.error,
 input.error {
-	outline: 2px solid #e53e3e;
+	outline: 2px solid #9c2828;
 }
 
 label.error{
-    color: #e53e3e;
+    color: #9c2828;
 }
 
 div.error {
-	color: #e53e3e;
+	color: #9c2828;
 	margin-block-start: 0.5rem;
+}
+
+.message-recived {
+    position: fixed;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    padding: 1rem 3rem;
+    background-color: #537252;
+    color: clr(neutral, no-color-black);
+    border-radius: 15px;
+    border: 2px solid #131f12;
+    outline: 1px solid #213620;
+    outline-offset: -4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 350ms ease-in-out;
+    z-index: 1002;
+    & h5 {
+        text-align: center;
+    }
+    & p {
+        max-width: 100%
+    }
+}
+.message-recived.show-message {
+   
+    opacity: 1;
+    transform: translate(-50%, -40%);
 }

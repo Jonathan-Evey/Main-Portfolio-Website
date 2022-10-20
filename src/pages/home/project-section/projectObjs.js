@@ -10,7 +10,14 @@ const allProjects = {
 				"Site is a static website, but was made using React to reinforce my knowledge of React. This gave me the opportunity to work with React Router, and Formik for the first time.",
 				"Main resources used in the project are React/JavaScript, Figma was used for design, with SASS for site styling. Site was deployed using Firebase.",
 			],
-			img: ["/src/assets/test-img.jpg", "/src/assets/test-img-two.jpg"],
+			img: [
+				"/assets/personal-website-five.PNG",
+				"/assets/personal-website-six.PNG",
+				"/assets/personal-website-one.PNG",
+				"/assets/personal-website-two.PNG",
+				"/assets/personal-website-three.PNG",
+				"/assets/personal-website-four.PNG",
+			],
 			wrightUp: {
 				projectSummary:
 					"Personal website to display projects that I have completed, and a convenient resource for someone to get in contact with me.",
