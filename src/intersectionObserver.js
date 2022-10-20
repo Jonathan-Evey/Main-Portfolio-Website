@@ -4,12 +4,23 @@ const setUpObserver = () => {
 	const mainObserver = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
-				document
-					.querySelector(".main-btn")
-					.classList.toggle("show", !entry.isIntersecting);
-				document
-					.querySelector(".projects-btn")
-					.classList.toggle("show", entry.isIntersecting);
+				if (entry.isIntersecting) {
+					document
+						.querySelector(".main-btn")
+						.classList.remove("show");
+					document
+						.querySelector(".contact-btn")
+						.classList.add("show");
+					document
+						.querySelector(".projects-btn")
+						.classList.add("show");
+				}
+				if (!entry.isIntersecting) {
+					document.querySelector(".main-btn").classList.add("show");
+					document
+						.querySelector(".projects-btn")
+						.classList.remove("show");
+				}
 			});
 		},
 		{
@@ -17,29 +28,30 @@ const setUpObserver = () => {
 		}
 	);
 	mainObserver.observe(eachSection[0]);
-	// const projectsObserver = new IntersectionObserver(
-	// 	(entries) => {
-	// 		entries.forEach((entry) => {
-	// 			console.log("enter");
-	// 			document
-	// 				.querySelector(".projects-btn")
-	// 				.classList.toggle("show", !entry.isIntersecting);
-	// 		});
-	// 	},
-	// 	{
-	// 		threshold: 0.15,
-	// 	}
-	// );
-	// projectsObserver.observe(eachSection[1]);
 	const contactObserver = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {
-				document
-					.querySelector(".contact-btn")
-					.classList.toggle("show", !entry.isIntersecting);
-				document
-					.querySelector(".projects-btn")
-					.classList.toggle("show", entry.isIntersecting);
+				if (entry.isIntersecting) {
+					document
+						.querySelector(".contact-btn")
+						.classList.remove("show");
+					document
+						.querySelector(".projects-btn")
+						.classList.add("show");
+				}
+				if (
+					!entry.isIntersecting &&
+					document
+						.querySelector(".main-btn")
+						.classList.contains("show")
+				) {
+					document
+						.querySelector(".contact-btn")
+						.classList.add("show");
+					document
+						.querySelector(".projects-btn")
+						.classList.remove("show");
+				}
 			});
 		},
 		{
