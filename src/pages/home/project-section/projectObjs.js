@@ -20,7 +20,7 @@ const allProjects = {
 			],
 			wrightUp: {
 				projectSummary:
-					"My personal website was made to be a convenient place to showcase my abilities by displaying the projects that I have completed, and a convenient resource for someone to get in contact with me.",
+					"My personal website was made to be a place to showcase my abilities by displaying the projects that I have completed, and be a convenient resource for someone to get in contact with me.",
 				overview:
 					"Website was made using React as a way to get additional experience with the React framework. This opened up the opportunity to work with React Router for handling page redirection, and Formlik to handle the contact form validation, and form state. I designed the site using Figma to create the design and mock-ups, and I used SASS for the layout and styling of the website. Site was deployed and hosted using Fireship and uses Firestore to store the messages submitted from the contact form.",
 				mainChallenges: [
