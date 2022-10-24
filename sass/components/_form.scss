@@ -46,8 +46,8 @@ div.error {
     bottom: 10%;
     left: 50%;
     transform: translate(-50%, -10%);
-    padding: 1rem 3rem;
-    background-color: #537252;
+    padding: 2rem 3rem;
+    background-color: #377235;
     color: clr(neutral, no-color-black);
     border-radius: 15px;
     border: 2px solid #131f12;
@@ -57,6 +57,10 @@ div.error {
     pointer-events: none;
     transition: all 350ms ease-in-out;
     z-index: 1002;
+    @media (max-width: 950px) {
+        width: 80%;
+    }
+
     & h5 {
         text-align: center;
     }

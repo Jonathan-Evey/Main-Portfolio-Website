@@ -77,9 +77,9 @@ const ContactForm = () => {
                 <button onClick={() => {setValidateAfterSubmit(true)}} className="btn submit underline | fs-600 fw-bold padding-inline-24 margin-inline-start-24 show" type="submit">send message</button>
             </form>
            
-            <div className={`message-recived${isMessageConfirmationDisplay ? " show-message" : ""} | fw-bold`} aria-hidden={isMessageConfirmationDisplay ? "false" : "true"}>
-                <h5 className="fs-500 margin-block-end-16">Thank you for reaching out!</h5>
-                <p className="message-recived-text">I look forward to working with you and I will get back to you as soon as possible</p>
+            <div className={`message-recived${isMessageConfirmationDisplay ? " show-message" : ""}`} aria-hidden={isMessageConfirmationDisplay ? "false" : "true"}>
+                <h5 className="fs-600 margin-block-end-16 fw-bold">Thank you for getting in touch!</h5>
+                <p className="message-recived-text | fs-400">I look forward to speaking with you and I will follow up as soon as possible.</p>
             </div>
           
         </>
