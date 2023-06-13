@@ -1,4 +1,4 @@
-# Personal Portfolio Wedsite
+# Personal Portfolio Website
 
 Made using Vite, React and Sass.
 
