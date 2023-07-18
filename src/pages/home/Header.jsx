@@ -4,9 +4,11 @@ import { Link } from "react-router-dom"
 const Header = (props) => {
 
   const [currentPage, setCurrentPage] = useState(null)
+  const [menuOpen, setMenuOpen] = useState(false)
 
 
   const toggleMenu = (e) => {
+    setMenuOpen(!menuOpen)
     document.querySelector(".main-nav").classList.toggle("open");
     document.querySelector(".nav-icon-display").classList.toggle("open");
     document.querySelector(".nav-icon-display-two").classList.toggle("open");
@@ -57,7 +59,9 @@ const Header = (props) => {
                 <button onClick={scrollToContact} className="btn contact-btn nav-btn underline | fs-600 fw-bold margin-inline-start-36">contact</button>
             </div>
           </nav>
-          <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>
+          <button onClick={toggleMenu} className="btn toggle-nav-btn" aria-labelledby="nav-btn-label">
+            <span className="nav-btn-label" id="nav-btn-label">{menuOpen ? "Close Navigation" : "Open Navigation"}</span>
+          </button>
           <div className="nav-btn-background-shadow"></div>
           <div className="nav-icon-display"></div>
           <div className="nav-icon-display-two"></div>
@@ -73,7 +77,9 @@ const Header = (props) => {
                     <Link to={`/#contact`} className="btn nav-btn underline show | fs-600 fw-bold margin-inline-start-36">Contact</Link>
                 </div>
             </nav>
-            <button onClick={toggleMenu} className="btn toggle-nav-btn"></button>
+            <button onClick={toggleMenu} className="btn toggle-nav-btn" aria-labelledby="nav-btn-label">
+              <span className="nav-btn-label" id="nav-btn-label">{menuOpen ? "Close Navigation" : "Open Navigation"}</span>
+            </button>
             <div className="nav-btn-background-shadow"></div>
             <div className="nav-icon-display"></div>
             <div className="nav-icon-display-two"></div>
